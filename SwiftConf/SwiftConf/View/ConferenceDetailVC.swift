@@ -53,6 +53,7 @@ class ConferenceDetailVC: UIViewController {
         confDescriptionLbl = UILabel()
         confDescriptionLbl.text = viewModel.confModel[index].description
         confDescriptionLbl.numberOfLines = 0
+        confDescriptionLbl.font = UIFont.systemFont(ofSize: 16)
         confDescriptionLbl.translatesAutoresizingMaskIntoConstraints = false
         
         btnStack = UIStackView()

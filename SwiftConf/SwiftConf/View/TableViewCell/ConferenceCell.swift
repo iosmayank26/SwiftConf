@@ -40,8 +40,18 @@ class ConferenceCell: UITableViewCell {
         let confLabel = UILabel()
         confLabel.text = "Hello"
         confLabel.numberOfLines = 0
+        confLabel.font = UIFont.boldSystemFont(ofSize: 16)
         confLabel.translatesAutoresizingMaskIntoConstraints = false
         return confLabel
+    }()
+    
+    private let confDateLabel: UILabel = {
+        let confDateLabel = UILabel()
+        confDateLabel.text = "Hello"
+        confDateLabel.numberOfLines = 0
+        confDateLabel.font = UIFont.systemFont(ofSize: 14)
+        confDateLabel.translatesAutoresizingMaskIntoConstraints = false
+        return confDateLabel
     }()
     
     // MARK: - Init
@@ -57,9 +67,10 @@ class ConferenceCell: UITableViewCell {
     
     // MARK: - Configure Cell
     
-    public func configureCell(image : UIImage, label : String) {
+    public func configureCell(image : UIImage, label : String, date: String) {
         confImageView.image = image
         confLabel.text = label
+        confDateLabel.text = date
     }
     
     public func configureInterest(interest: Interest) {
@@ -73,6 +84,7 @@ class ConferenceCell: UITableViewCell {
     private func setupUI() {
         self.contentView.addSubview(confImageView)
         self.contentView.addSubview(confLabel)
+        self.contentView.addSubview(confDateLabel)
         self.contentView.addSubview(confResponseImageView)
         self.contentView.addSubview(cellDivider)
         
@@ -84,7 +96,11 @@ class ConferenceCell: UITableViewCell {
             
             confLabel.topAnchor.constraint(equalTo: confImageView.topAnchor),
             confLabel.leadingAnchor.constraint(equalTo: confImageView.trailingAnchor, constant: 16),
-            confLabel.bottomAnchor.constraint(equalTo: self.cellDivider.topAnchor, constant: -60),
+            
+            confDateLabel.topAnchor.constraint(equalTo: confLabel.bottomAnchor, constant: 10),
+            confDateLabel.leadingAnchor.constraint(equalTo: confLabel.leadingAnchor),
+            confDateLabel.trailingAnchor.constraint(equalTo: confLabel.trailingAnchor),
+            confDateLabel.bottomAnchor.constraint(equalTo: self.cellDivider.topAnchor, constant: -32),
             
             confResponseImageView.centerYAnchor.constraint(equalTo: self.contentView.layoutMarginsGuide.centerYAnchor),
             confResponseImageView.leadingAnchor.constraint(equalTo: self.confLabel.trailingAnchor, constant: -16),

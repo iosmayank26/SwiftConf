@@ -15,6 +15,7 @@ enum Interest {
 
 struct ConferenceListModel {
     var name: String
+    var tentativeDate: String
     var logo: String
     var image: String
     var description: String

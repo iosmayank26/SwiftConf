@@ -23,7 +23,7 @@ class ConferenceListVC: UIViewController {
     
     private func initialSetup() {
         self.view.backgroundColor = .systemTeal
-        self.title = "Swift Conferences 2023"
+        self.navigationItem.title = "Swift Conferences 2023"
         setupTableView()
     }
     
@@ -62,7 +62,7 @@ extension ConferenceListVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ConferenceCell.identifier, for: indexPath) as? ConferenceCell else { return UITableViewCell() }
-        cell.configureCell(image: UIImage(named: viewModel.confModel[indexPath.row].logo) ?? UIImage(), label: viewModel.confModel[indexPath.row].name)
+        cell.configureCell(image: UIImage(named: viewModel.confModel[indexPath.row].logo) ?? UIImage(), label: viewModel.confModel[indexPath.row].name, date: viewModel.confModel[indexPath.row].tentativeDate)
         cell.selectionStyle = .none
         return cell
     }
