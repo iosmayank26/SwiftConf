@@ -67,13 +67,13 @@ class ConferenceCell: UITableViewCell {
     
     // MARK: - Configure Cell
     
-    public func configureCell(image : UIImage, label : String, date: String) {
+    func configureCell(image : UIImage, confName : String, confDate: String) {
         confImageView.image = image
-        confLabel.text = label
-        confDateLabel.text = date
+        confLabel.text = confName
+        confDateLabel.text = confDate
     }
     
-    public func configureInterest(interest: Interest) {
+    func configureInterest(interest: Interest) {
         switch interest {
         case .interested : confResponseImageView.image = UIImage(named: "positive")
         case .notInterested : confResponseImageView.image = UIImage(named: "negative")

@@ -11,8 +11,8 @@ class ConferenceListVC: UIViewController {
     
     // MARK: - Variables
     
-    var tableView : UITableView!
-    var viewModel : ConferenceListVM = ConferenceListVM()
+    private var tableView : UITableView!
+    private var viewModel : ConferenceListVM = ConferenceListVM()
     
     // MARK: - Lifecycle
     
@@ -62,7 +62,7 @@ extension ConferenceListVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ConferenceCell.identifier, for: indexPath) as? ConferenceCell else { return UITableViewCell() }
-        cell.configureCell(image: UIImage(named: viewModel.confModel[indexPath.row].logo) ?? UIImage(), label: viewModel.confModel[indexPath.row].name, date: viewModel.confModel[indexPath.row].tentativeDate)
+        cell.configureCell(image: UIImage(named: viewModel.confModel[indexPath.row].logo) ?? UIImage(), confName: viewModel.confModel[indexPath.row].name, confDate: viewModel.confModel[indexPath.row].tentativeDate)
         cell.selectionStyle = .none
         return cell
     }

@@ -76,7 +76,7 @@ class ConferenceDetailVC: UIViewController {
         notInterestedBtn.translatesAutoresizingMaskIntoConstraints = false
         notInterestedBtn.setTitleColor(.systemOrange, for: .normal)
         notInterestedBtn.setTitle("Not Interested", for: .normal)
-        notInterestedBtn.addTarget(self, action: #selector(notInterestedTapped), for: .touchUpInside)
+        notInterestedBtn.addTarget(self, action: #selector(notInterestedBtnTapped), for: .touchUpInside)
         
         
         self.view.backgroundColor = .white
@@ -114,7 +114,7 @@ class ConferenceDetailVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc func notInterestedTapped() {
+    @objc func notInterestedBtnTapped() {
         callback?(.notInterested)
         navigationController?.popViewController(animated: true)
     }
