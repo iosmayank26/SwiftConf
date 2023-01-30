@@ -15,7 +15,7 @@
 		D5255FC62981C74600A25118 /* SwiftConfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FC52981C74600A25118 /* SwiftConfTests.swift */; };
 		D5255FD02981C74600A25118 /* SwiftConfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FCF2981C74600A25118 /* SwiftConfUITests.swift */; };
 		D5255FD22981C74600A25118 /* SwiftConfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FD12981C74600A25118 /* SwiftConfUITestsLaunchTests.swift */; };
-		D5255FDF2981CC8F00A25118 /* ConferenceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FDE2981CC8F00A25118 /* ConferenceListModel.swift */; };
+		D5255FDF2981CC8F00A25118 /* ConferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FDE2981CC8F00A25118 /* ConferenceModel.swift */; };
 		D5255FE12981CD7300A25118 /* ConferenceListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE02981CD7300A25118 /* ConferenceListVM.swift */; };
 		D5255FE32981CE8200A25118 /* ConferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE22981CE8200A25118 /* ConferenceCell.swift */; };
 		D5255FE52981D16400A25118 /* ConferenceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */; };
@@ -51,7 +51,7 @@
 		D5255FCB2981C74600A25118 /* SwiftConfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5255FCF2981C74600A25118 /* SwiftConfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConfUITests.swift; sourceTree = "<group>"; };
 		D5255FD12981C74600A25118 /* SwiftConfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D5255FDE2981CC8F00A25118 /* ConferenceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListModel.swift; sourceTree = "<group>"; };
+		D5255FDE2981CC8F00A25118 /* ConferenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceModel.swift; sourceTree = "<group>"; };
 		D5255FE02981CD7300A25118 /* ConferenceListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListVM.swift; sourceTree = "<group>"; };
 		D5255FE22981CE8200A25118 /* ConferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCell.swift; sourceTree = "<group>"; };
 		D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailVC.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		D5255FE62981D9A000A25118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D5255FDE2981CC8F00A25118 /* ConferenceListModel.swift */,
+				D5255FDE2981CC8F00A25118 /* ConferenceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			files = (
 				D5255FE12981CD7300A25118 /* ConferenceListVM.swift in Sources */,
 				D5255FB32981C74500A25118 /* ConferenceListVC.swift in Sources */,
-				D5255FDF2981CC8F00A25118 /* ConferenceListModel.swift in Sources */,
+				D5255FDF2981CC8F00A25118 /* ConferenceModel.swift in Sources */,
 				D5255FAF2981C74500A25118 /* AppDelegate.swift in Sources */,
 				D5255FE52981D16400A25118 /* ConferenceDetailVC.swift in Sources */,
 				D5255FB12981C74500A25118 /* SceneDelegate.swift in Sources */,

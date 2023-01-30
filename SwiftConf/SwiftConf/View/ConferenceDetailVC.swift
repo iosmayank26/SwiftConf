@@ -12,13 +12,13 @@ class ConferenceDetailVC: UIViewController {
     // MARK: - Variables
     
     var callback : ((Interest)->())?
-    var confImage: UIImageView!
-    var confDescriptionLbl: UILabel!
-    var btnStack: UIStackView!
-    var interestedBtn: UIButton!
-    var notInterestedBtn: UIButton!
-    var index: Int
-    var viewModel: ConferenceListVM
+    private var confImage: UIImageView!
+    private var confDescriptionLbl: UILabel!
+    private var btnStack: UIStackView!
+    private var interestedBtn: UIButton!
+    private var notInterestedBtn: UIButton!
+    private var index: Int
+    private var viewModel: ConferenceListVM
     
     // MARK: - Init
     

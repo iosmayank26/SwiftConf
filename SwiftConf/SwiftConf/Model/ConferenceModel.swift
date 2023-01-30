@@ -13,11 +13,11 @@ enum Interest {
     case none
 }
 
-struct ConferenceListModel {
-    var name: String
-    var tentativeDate: String
-    var logo: String
-    var image: String
-    var description: String
+struct ConferenceModel {
+    let name: String
+    let tentativeDate: String
+    let logo: String
+    let image: String
+    let description: String
     var interest: Interest
 }
