@@ -67,10 +67,10 @@ class ConferenceCell: UITableViewCell {
     
     // MARK: - Configure Cell
     
-    func configureCell(image : UIImage, confName : String, confDate: String) {
-        confImageView.image = image
-        confLabel.text = confName
-        confDateLabel.text = confDate
+    func configureCell(conference: ConferenceModel) {
+        confImageView.image = UIImage(named: conference.image)
+        confLabel.text = conference.name
+        confDateLabel.text = conference.tentativeDate
     }
     
     func configureInterest(interest: Interest) {

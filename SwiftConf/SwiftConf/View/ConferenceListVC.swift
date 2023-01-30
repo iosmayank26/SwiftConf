@@ -57,12 +57,12 @@ class ConferenceListVC: UIViewController {
 
 extension ConferenceListVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.confModel.count
+        return viewModel.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ConferenceCell.identifier, for: indexPath) as? ConferenceCell else { return UITableViewCell() }
-        cell.configureCell(image: UIImage(named: viewModel.confModel[indexPath.row].logo) ?? UIImage(), confName: viewModel.confModel[indexPath.row].name, confDate: viewModel.confModel[indexPath.row].tentativeDate)
+        cell.configureCell(conference: viewModel.cellForRowConferenceData(index: indexPath.row))
         cell.selectionStyle = .none
         return cell
     }

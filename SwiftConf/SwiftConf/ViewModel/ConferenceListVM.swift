@@ -31,4 +31,14 @@ final class ConferenceListVM {
             
             ConferenceModel(name: "iOSDevUK Conf", tentativeDate: "04-07 September,2023", logo: "iOSDevUKConf", image: "iOSDevUKConf", description: "The conference aims to bring together developers of all experience levels and backgrounds in an inclusive environment to share knowledge and experience from a diverse set of speakers. The event will be kicked off on April 30th with a half day of talks focused on indie development. This is an experiment in replacing what would usually be a day of workshops. The following two days (May 1st and May 2nd) will be a single track focused on Swift and iOS development featuring talks from 14 talented speakers. Come meet and hear in person the voices you know and respect online.", interest: .none)]
     }
+    
+    // MARK: - Methods to handle data
+    
+    func numberOfRowsInSection() -> Int {
+        return confModel.count
+    }
+    
+    func cellForRowConferenceData(index: Int) -> ConferenceModel {
+        return confModel[index]
+    }
 }
