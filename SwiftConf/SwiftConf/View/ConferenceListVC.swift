@@ -34,15 +34,17 @@ class ConferenceListVC: UIViewController {
         tableView.dataSource = self
         tableView.separatorColor = .clear
         tableView.separatorStyle = .none
-        tableView.register(ConferenceCell.self, forCellReuseIdentifier: ConferenceCell.identifier)
         tableView.estimatedRowHeight = 92
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Register cells
+        tableView.register(ConferenceCell.self, forCellReuseIdentifier: ConferenceCell.identifier)
+        
         addTableViewConstraints()
     }
     
     private func addTableViewConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
