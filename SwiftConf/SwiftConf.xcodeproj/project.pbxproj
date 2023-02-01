@@ -19,6 +19,7 @@
 		D5255FE12981CD7300A25118 /* ConferenceListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE02981CD7300A25118 /* ConferenceListVM.swift */; };
 		D5255FE32981CE8200A25118 /* ConferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE22981CE8200A25118 /* ConferenceCell.swift */; };
 		D5255FE52981D16400A25118 /* ConferenceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */; };
+		D5D3A30A298A8848008E2687 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A309298A8848008E2687 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D5255FE02981CD7300A25118 /* ConferenceListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListVM.swift; sourceTree = "<group>"; };
 		D5255FE22981CE8200A25118 /* ConferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceCell.swift; sourceTree = "<group>"; };
 		D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailVC.swift; sourceTree = "<group>"; };
+		D5D3A309298A8848008E2687 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		D5255FE82981D9BE00A25118 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5D3A309298A8848008E2687 /* BaseViewController.swift */,
 				D5255FB22981C74500A25118 /* ConferenceListVC.swift */,
 				D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */,
 				D5255FE92981D9D300A25118 /* TableViewCell */,
@@ -303,6 +306,7 @@
 				D5255FDF2981CC8F00A25118 /* ConferenceModel.swift in Sources */,
 				D5255FAF2981C74500A25118 /* AppDelegate.swift in Sources */,
 				D5255FE52981D16400A25118 /* ConferenceDetailVC.swift in Sources */,
+				D5D3A30A298A8848008E2687 /* BaseViewController.swift in Sources */,
 				D5255FB12981C74500A25118 /* SceneDelegate.swift in Sources */,
 				D5255FE32981CE8200A25118 /* ConferenceCell.swift in Sources */,
 			);

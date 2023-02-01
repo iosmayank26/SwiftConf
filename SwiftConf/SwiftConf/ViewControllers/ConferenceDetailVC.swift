@@ -11,14 +11,53 @@ class ConferenceDetailVC: UIViewController {
     
     // MARK: - Variables
     
-    var callback : ((Interest)->())?
-    private var confImage: UIImageView!
-    private var confDescriptionLbl: UILabel!
-    private var btnStack: UIStackView!
-    private var interestedBtn: UIButton!
-    private var notInterestedBtn: UIButton!
+    var interestBtnCallback : ((Interest)->())?
     private var index: Int
     private var viewModel: ConferenceListVM
+    
+    private var confImage: UIImageView = {
+        let confImage = UIImageView()
+        confImage.contentMode = .scaleAspectFit
+        confImage.translatesAutoresizingMaskIntoConstraints = false
+        return confImage
+    }()
+    
+    private var confDescriptionLbl: UILabel = {
+        let confDescriptionLbl = UILabel()
+        confDescriptionLbl.numberOfLines = 0
+        confDescriptionLbl.font = UIFont.systemFont(ofSize: 16)
+        confDescriptionLbl.translatesAutoresizingMaskIntoConstraints = false
+        return confDescriptionLbl
+    }()
+    
+    private var btnStack: UIStackView = {
+        let btnStack = UIStackView()
+        btnStack.axis = .horizontal
+        btnStack.distribution  = .fillEqually
+        btnStack.alignment = .center
+        btnStack.spacing = 10
+        btnStack.translatesAutoresizingMaskIntoConstraints = false
+        return btnStack
+    }()
+    
+    private var interestedBtn: UIButton = {
+        let interestedBtn = UIButton()
+        interestedBtn.backgroundColor = .systemOrange
+        interestedBtn.translatesAutoresizingMaskIntoConstraints = false
+        interestedBtn.setTitleColor(.white, for: .normal)
+        interestedBtn.setTitle("Interested", for: .normal)
+        return interestedBtn
+    }()
+    
+    private var notInterestedBtn: UIButton = {
+        let notInterestedBtn = UIButton()
+        notInterestedBtn.layer.borderWidth = 1
+        notInterestedBtn.layer.borderColor = UIColor.systemOrange.cgColor
+        notInterestedBtn.translatesAutoresizingMaskIntoConstraints = false
+        notInterestedBtn.setTitleColor(.systemOrange, for: .normal)
+        notInterestedBtn.setTitle("Not Interested", for: .normal)
+        return notInterestedBtn
+    }()
     
     // MARK: - Init
     
@@ -45,39 +84,10 @@ class ConferenceDetailVC: UIViewController {
     }
     
     private func setupSubViews() {
-        confImage = UIImageView()
-        confImage.contentMode = .scaleAspectFit
         confImage.image = UIImage(named: viewModel.getConfImageOnIndex(index: index))
-        confImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        confDescriptionLbl = UILabel()
         confDescriptionLbl.text = viewModel.getConfDescriptionOnIndex(index: index)
-        confDescriptionLbl.numberOfLines = 0
-        confDescriptionLbl.font = UIFont.systemFont(ofSize: 16)
-        confDescriptionLbl.translatesAutoresizingMaskIntoConstraints = false
-        
-        btnStack = UIStackView()
-        btnStack.axis = .horizontal
-        btnStack.distribution  = .fillEqually
-        btnStack.alignment = .center
-        btnStack.spacing = 10
-        btnStack.translatesAutoresizingMaskIntoConstraints = false
-        
-        interestedBtn = UIButton()
-        interestedBtn.backgroundColor = .systemOrange
-        interestedBtn.translatesAutoresizingMaskIntoConstraints = false
-        interestedBtn.setTitleColor(.white, for: .normal)
-        interestedBtn.setTitle("Interested", for: .normal)
         interestedBtn.addTarget(self, action: #selector(interestedBtnTapped), for: .touchUpInside)
-        
-        notInterestedBtn = UIButton()
-        notInterestedBtn.layer.borderWidth = 1
-        notInterestedBtn.layer.borderColor = UIColor.systemOrange.cgColor
-        notInterestedBtn.translatesAutoresizingMaskIntoConstraints = false
-        notInterestedBtn.setTitleColor(.systemOrange, for: .normal)
-        notInterestedBtn.setTitle("Not Interested", for: .normal)
         notInterestedBtn.addTarget(self, action: #selector(notInterestedBtnTapped), for: .touchUpInside)
-        
         
         self.view.backgroundColor = .white
         self.btnStack.addArrangedSubview(notInterestedBtn)
@@ -110,12 +120,12 @@ class ConferenceDetailVC: UIViewController {
     }
     
     @objc func interestedBtnTapped() {
-        callback?(.interested)
+        interestBtnCallback?(.interested)
         navigationController?.popViewController(animated: true)
     }
     
     @objc func notInterestedBtnTapped() {
-        callback?(.notInterested)
+        interestBtnCallback?(.notInterested)
         navigationController?.popViewController(animated: true)
     }
     

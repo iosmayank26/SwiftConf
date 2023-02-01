@@ -30,8 +30,10 @@ class ConferenceListVC: UIViewController {
     private func setupTableView() {
         tableView = UITableView()
         self.view.addSubview(tableView)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.separatorColor = .clear
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 92
@@ -71,7 +73,7 @@ extension ConferenceListVC : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destinationController = ConferenceDetailVC(index: indexPath.row, viewModel: self.viewModel)
-        destinationController.callback = { [weak self] selectedInterest in
+        destinationController.interestBtnCallback = { [weak self] selectedInterest in
             guard let weakSelf = self, let cell = weakSelf.tableView.cellForRow(at: indexPath) as? ConferenceCell else {return}
             cell.configureInterest(interest: selectedInterest)
         }
