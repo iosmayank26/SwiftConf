@@ -47,11 +47,11 @@ class ConferenceDetailVC: UIViewController {
     private func setupSubViews() {
         confImage = UIImageView()
         confImage.contentMode = .scaleAspectFit
-        confImage.image = UIImage(named: viewModel.confModel[index].image)
+        confImage.image = UIImage(named: viewModel.getConfImageOnIndex(index: index))
         confImage.translatesAutoresizingMaskIntoConstraints = false
         
         confDescriptionLbl = UILabel()
-        confDescriptionLbl.text = viewModel.confModel[index].description
+        confDescriptionLbl.text = viewModel.getConfDescriptionOnIndex(index: index)
         confDescriptionLbl.numberOfLines = 0
         confDescriptionLbl.font = UIFont.systemFont(ofSize: 16)
         confDescriptionLbl.translatesAutoresizingMaskIntoConstraints = false

@@ -108,7 +108,7 @@
 				D5255FAE2981C74500A25118 /* AppDelegate.swift */,
 				D5255FB02981C74500A25118 /* SceneDelegate.swift */,
 				D5255FE62981D9A000A25118 /* Model */,
-				D5255FE82981D9BE00A25118 /* View */,
+				D5255FE82981D9BE00A25118 /* ViewControllers */,
 				D5255FE72981D9AF00A25118 /* ViewModel */,
 				D5255FB72981C74600A25118 /* Assets.xcassets */,
 				D5255FB92981C74600A25118 /* LaunchScreen.storyboard */,
@@ -150,14 +150,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D5255FE82981D9BE00A25118 /* View */ = {
+		D5255FE82981D9BE00A25118 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				D5255FB22981C74500A25118 /* ConferenceListVC.swift */,
 				D5255FE42981D16400A25118 /* ConferenceDetailVC.swift */,
 				D5255FE92981D9D300A25118 /* TableViewCell */,
 			);
-			path = View;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D5255FE92981D9D300A25118 /* TableViewCell */ = {
